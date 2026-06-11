@@ -52,7 +52,7 @@
 }
 
 .profile-subtitle {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   color: #334155;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -61,7 +61,7 @@
 .profile-bio {
   line-height: 1.5;
   color: #64748b;
-  font-size: 1.4rem;
+  font-size: 0.7rem;
   margin-bottom: 2rem;
 }
 
@@ -81,7 +81,7 @@
 
 .divider-text {
   padding: 0 10px;
-  font-size: 0.85rem;
+  font-size: 0.15rem;
   color: #94a3b8;
   font-weight: 500;
   text-transform: uppercase;
@@ -98,12 +98,12 @@
 .extra-info h4 {
   margin: 0;
   color: #334155;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
 }
 
 .extra-info p {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 0.7rem;
 }
 
 .core-skills-list {
@@ -144,14 +144,14 @@
 
 .skill-meta h4 {
   margin: 0 0 2px 0;
-  font-size: 1.05rem;
+  font-size: 0.35rem;
   color: #0D9488;
   font-weight: 600;
 }
 
 .skill-meta p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.15rem;
   color: #0D9488;
 }
 
@@ -161,7 +161,7 @@
 }
 
 .supporting-title {
-  font-size: 1rem;
+  font-size: 0.3rem;
   color: #475569;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -178,7 +178,7 @@
 .supporting-badge {
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.15rem;
   font-weight: 500;
 }
 
@@ -208,6 +208,6 @@
     font-size: 1.2rem;
   }
   .profile-subtitle {
-    font-size: 1.3rem;
+    font-size: 0.6rem;
   }
 }
