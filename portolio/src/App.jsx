@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Lenis from 'lenis';
-import { LanguageProvider } from './context/LanguageContext';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Project from './components/Projects';
-import Contact from './components/Contact';
+import { LanguageProvider } from './context/LanguageContext.jsx';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import About from './components/About.jsx';
+import Project from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
 
 export default function App() {
   const [isNavLocked, setIsNavLocked] = useState(true);
