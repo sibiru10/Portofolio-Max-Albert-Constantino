@@ -1,6 +1,7 @@
+/* Base Layout & Theme Update (Light Theme like Image 2) */
 .about-section {
   padding: 80px 10% 150px;
-  background-color: #0F172A;
+  background-color: #0F172A; /* Light soft background */
   color: #1e293b;
   font-family: system-ui, -apple-system, sans-serif;
 }
@@ -12,21 +13,24 @@
   align-items: stretch;
 }
 
+/* Card Styling & Hover Scaling Effect */
 .about-card {
   background: #E2E8F0;
   border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.03);
-  will-change: transform, opacity;
+  will-change: transform, opacity; 
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
 
+/* Card scale up on hover */
 .about-card:hover {
   transform: scale(1.03);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
 }
 
+/* Card Headers */
 .card-header {
   display: flex;
   align-items: center;
@@ -45,12 +49,7 @@
   margin: 0;
 }
 
-.header-icon-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
+/* Left Card Styles */
 .profile-subtitle {
   font-size: 0.8rem;
   color: #334155;
@@ -65,6 +64,7 @@
   margin-bottom: 2rem;
 }
 
+/* Divider Styles */
 .divider-container {
   display: flex;
   align-items: center;
@@ -98,14 +98,15 @@
 .extra-info h4 {
   margin: 0;
   color: #334155;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 .extra-info p {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 1.4rem;
 }
 
+/* Right Card Styles - Core Stack Blocks */
 .core-skills-list {
   display: flex;
   flex-direction: column;
@@ -118,7 +119,7 @@
   align-items: center;
   gap: 1.2rem;
   padding: 1rem 1.5rem;
-  background-color: #e0f2fe;
+  background-color: #e0f2fe; /* Light blue accent background blocks */
   border: 1px solid #bae6fd;
   border-radius: 12px;
   transition: background-color 0.2s ease;
@@ -129,17 +130,7 @@
 }
 
 .skill-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-.skill-logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  font-size: 1.4rem;
 }
 
 .skill-meta h4 {
@@ -155,6 +146,7 @@
   color: #0D9488;
 }
 
+/* Supporting Minimal Badges */
 .supporting-section {
   border-top: 1px dashed #e2e8f0;
   padding-top: 1.5rem;
@@ -178,36 +170,41 @@
 .supporting-badge {
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 0.15rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
-.badge-0 { background-color: #fef3c7; color: #d97706; }
-.badge-1 { background-color: #f3e8ff; color: #7c3aed; }
-.badge-2 { background-color: #e0f2fe; color: #0369a1; }
-.badge-3 { background-color: #dcfce7; color: #15803d; }
+/* Individual colors mapped to look like Image 2 options */
+.badge-0 { background-color: #fef3c7; color: #d97706; } /* Yellowish */
+.badge-1 { background-color: #f3e8ff; color: #7c3aed; } /* Purple */
+.badge-2 { background-color: #e0f2fe; color: #0369a1; } /* Blue */
+.badge-3 { background-color: #dcfce7; color: #15803d; } /* Green */
 
+/* Responsive Design */
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   .about-section {
-    padding: 60px 5% 100px;
-  }
-  .card-header h2 {
-    font-size: 2.5rem;
+    padding: 60px 5%;
   }
 }
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
 
-@media (max-width: 768px) {
-  .about-card {
-    padding: 1.5rem;
-  }
-  .profile-bio, .extra-info p {
-    font-size: 1.2rem;
-  }
-  .profile-subtitle {
-    font-size: 0.6rem;
-  }
+.skill-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.header-icon-img {
+  width: 40px;      /* Adjust as needed */
+  height: 40px;
+  object-fit: contain;
 }
