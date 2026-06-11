@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import '../style/header.css';
+import '../style/Header.css';
 
 export default function Header({ isNavLocked }) {
   const { lang, toggleLanguage } = useLanguage();
