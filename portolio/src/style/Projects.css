@@ -1,0 +1,203 @@
+:root {
+  --bg-main-60: #0F172A;
+  --bg-card-surface: #1E293B;
+  --text-main-30: #E2E8F0;
+  --accent-teal-10: #0D9488;
+}
+
+.projects-container {
+  padding: 100px 10%;
+  margin-top: 100px;
+  background-color: var(--bg-main-60);
+  color: var(--text-main-30);
+}
+
+.projects-section-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-main-30);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-card-surface);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.project-image-container {
+  background-color: rgba(15, 23, 42, 0.5);
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.03);
+}
+
+.project-card-body {
+  padding: 25px;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-main-30);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main-30);
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.project-tech-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background-color: rgba(13, 148, 136, 0.1);
+  color: var(--accent-teal-10);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+.project-card-footer {
+  display: flex;
+  border-top: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.project-footer-link {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main-30);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.project-footer-link:first-child {
+  border-right: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.project-footer-link:hover {
+  background-color: rgba(13, 148, 136, 0.05);
+  color: var(--accent-teal-10);
+}
+
+.footer-svg-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: invert(93%) sepia(12%) saturate(304%) hue-rotate(182deg) brightness(97%) contrast(96%);
+  transition: filter 0.2s ease-in-out;
+}
+
+.project-footer-link:hover .footer-svg-icon {
+  filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
+}
+
+.projects-more-cta {
+  margin-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.projects-more-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-main-30);
+}
+
+.btn-more-github {
+  background-color: var(--accent-teal-10);
+  color: #0F172A;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-more-github:hover {
+  transform: scale(1.05);
+  background-color: #0b7c72;
+}
+
+.btn-git-svg {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0);
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 60px 5%;
+    margin-top: 40px;
+  }
+  .projects-section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-more-cta {
+    margin-top: 50px;
+  }
+}

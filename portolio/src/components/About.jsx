@@ -1,0 +1,140 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '../context/LanguageContext';
+import '../style/About.css';
+import cssLogo from '../assets/css-3-svgrepo-com.svg';
+import htmlLogo from '../assets/html-5-svgrepo-com.svg';
+import jsLogo from '../assets/javascript-svgrepo-com.svg';
+import reactLogo from '../assets/reactjs-svgrepo-com.svg';
+import gsapLogo from '../assets/gsap.png';
+import skillIcon from '../assets/work-alt-svgrepo-com.svg';
+import educationIcon from '../assets/profile-round-1342-svgrepo-com.svg';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function About() {
+  const { t } = useLanguage();
+
+  const sectionRef = useRef(null);
+  const leftCardRef = useRef(null);
+  const rightCardRef = useRef(null);
+
+  const coreSkills = [
+    { name: 'JavaScript', desc: 'Core Programming Language', icon: jsLogo },
+    { name: 'React', desc: 'Frontend Library', icon: reactLogo },
+    { name: 'GSAP', desc: 'Animation Framework', icon: gsapLogo },
+    { name: 'CSS', desc: 'Styling & Layout', icon: cssLogo },
+    { name: 'HTML', desc: 'Markup Language', icon: htmlLogo }
+  ];
+
+  const supportingSkills = ['Microsoft Word', 'Python', 'Canva', 'Figma'];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set([leftCardRef.current, rightCardRef.current], { opacity: 0, y: 50 });
+      gsap.set('.core-skill-row', { opacity: 0, x: 30 });
+      gsap.set('.supporting-badge', { opacity: 0, scale: 0.8 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        }
+      });
+
+      tl.to([leftCardRef.current, rightCardRef.current], {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out'
+      })
+      .to('.core-skill-row', {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: 'power2.out'
+      }, '-=0.4')
+      .to('.supporting-badge', {
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+        stagger: 0.05,
+        ease: 'back.out(1.7)'
+      }, '-=0.3');
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={sectionRef} id="about" className="about-section">
+      <div className="about-grid">
+        <div ref={leftCardRef} className="about-card profile-card">
+          <div className="card-header">
+            <img src={educationIcon} alt="Profile Icon" className="header-icon-img" />
+            <h2>{t.aboutTitle}</h2>
+          </div>
+
+          <div className="card-body">
+            <h3 className="profile-subtitle" style={{ color: '#0D9488' }}>
+              Max Albert Constantino - Web Developer
+            </h3>
+            <p className="profile-bio">{t.aboutBio}</p>
+
+            <div className="divider-container">
+              <span className="divider-text">{t.focusExperience}</span>
+            </div>
+
+            <div className="extra-info">
+              <div>
+                <h4 style={{ color: '#0D9488' }}>{t.lastEducation}</h4>
+                <p>{t.schoolDuration}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ref={rightCardRef} className="about-card skills-card">
+          <div className="card-header">
+            <img src={skillIcon} alt="Skills Icon" className="header-icon-img" />
+            <h2>{t.skillsTitle}</h2>
+          </div>
+
+          <div className="core-skills-list">
+            {coreSkills.map((skill, index) => (
+              <div key={index} className="core-skill-row">
+                <span className="skill-icon">
+                  <img
+                    src={skill.icon}
+                    alt={`${skill.name} Logo`}
+                    className="skill-logo-img"
+                  />
+                </span>
+                <div className="skill-meta">
+                  <h4>{skill.name}</h4>
+                  <p>{skill.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="supporting-section">
+            <h3 className="supporting-title">{t.supportingTitle}</h3>
+            <div className="supporting-container">
+              {supportingSkills.map((skill, index) => (
+                <span key={index} className={`supporting-badge badge-${index}`}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,169 @@
+footer.contact-container {
+  padding: 100px 10%;
+  background-color: #020617;
+  color: var(--text-main-30, #E2E8F0);
+  overflow-x: hidden;
+  border-top: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+#contact {
+  margin-top: 50px;
+}
+
+.contact-section-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-brand-wrapper {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-logo-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-brand-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
+}
+
+.contact-brand-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.contact-brand-name .text-highlight {
+  color: var(--accent-teal-10, #0D9488);
+}
+
+.contact-brand-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-brand-description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-main-30, #E2E8F0);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.contact-info-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-layout-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main-30, #E2E8F0);
+  opacity: 0.6;
+  margin: 0;
+  padding-left: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-detail-card {
+  background: var(--bg-card-surface, #1E293B);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.detail-item-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-label-zone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.6;
+  color: var(--text-main-30, #E2E8F0);
+}
+
+.detail-value-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  word-break: break-all;
+}
+
+.detail-svg-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: invert(93%) sepia(12%) saturate(304%) hue-rotate(182deg) brightness(97%) contrast(96%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.contact-detail-card:hover .detail-svg-icon {
+  filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
+}
+
+@media (max-width: 968px) {
+  .contact-layout {
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  .contact-brand-wrapper,
+  .contact-info-column {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 60px 5%;
+  }
+  .contact-section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  .contact-brand-name {
+    font-size: 1.8rem;
+  }
+  .contact-brand-description p {
+    font-size: 1rem;
+  }
+  .detail-value-text {
+    font-size: 1.2rem;
+  }
+}
