@@ -184,7 +184,7 @@ export default function About() {
   return (
     <section ref={sectionRef} id="about" className="about-section">
       <div style={{ textAlign: 'center' }}>
-        <span className="section-badge">get to know me better</span>
+        <span className="section-badge">{t.knowMe}</span>
       </div>
 
       <div className="about-grid">
