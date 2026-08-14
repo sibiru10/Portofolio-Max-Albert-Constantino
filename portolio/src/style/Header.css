@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 4%; /* Pushes logo and right elements further out to the edges */
+  padding: 1.25rem 4%;
   z-index: 1000;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(12px);
@@ -16,9 +16,8 @@
               0 1px 0 rgba(226, 232, 240, 0.1);
 }
 
-/* Logo - Made slightly larger and distinct */
 .nav-logo {
-  font-size: 1.95rem; /* Increased size */
+  font-size: 1.45rem;
   font-weight: 800;
   color: #E2E8F0;
   text-decoration: none;
@@ -26,23 +25,22 @@
 }
 
 .nav-logo span {
-  font-size: 1.95rem; /* Matches parent size */
+  font-size: 1.45rem;
   font-weight: 800;
   color: #0D9488;
 }
 
-/* Navigation Links - Pushed to the right side next to Language Toggle */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin-left: auto; /* Pushes links all the way right */
+  margin-left: auto;
 }
 
 .nav-links a {
   color: #E2E8F0;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   opacity: 0.8;
   transition: opacity 0.3s ease, color 0.3s ease;
@@ -54,7 +52,6 @@
   color: #0D9488;
 }
 
-/* Language Toggle Button */
 .lang-toggle {
   display: flex;
   align-items: center;
@@ -62,13 +59,13 @@
   background: rgba(13, 148, 136, 0.1);
   border: 1px solid #0D9488;
   color: #E2E8F0;
-  padding: 0.6rem 1.6rem;
+  padding: 0.5rem 1.4rem;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  margin-left: 1.75rem; /* Spacing between links and button */
+  margin-left: 1.75rem;
 }
 
 .lang-toggle:hover {
@@ -85,10 +82,6 @@
   cursor: not-allowed;
   opacity: 0.5;
 }
-
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
 
 @media (max-width: 1024px) {
   .navbar {
@@ -107,25 +100,25 @@
     gap: 15px;
   }
   .nav-logo {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .nav-logo span {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .nav-links {
     gap: 1.2rem;
     order: 2;
     width: 100%;
-    margin-left: 0; /* Resets flex push on stacked mobile view */
+    margin-left: 0;
     justify-content: center;
   }
   .nav-links a {
-    font-size: 1.1875rem;
+    font-size: 0.95rem;
     padding: 6px 10px;
   }
   .lang-toggle {
     margin-left: 0;
-    font-size: 1.0625rem;
-    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.1rem;
   }
 }
