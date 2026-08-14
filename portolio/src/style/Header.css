@@ -6,16 +6,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 10%;
+  padding: 1.25rem 4%; /* Pushes logo and right elements further out to the edges */
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.05);
+  border-bottom: 1px solid rgba(13, 148, 136, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 
+              0 1px 0 rgba(226, 232, 240, 0.1);
 }
 
+/* Logo - Made slightly larger and distinct */
 .nav-logo {
-  font-size: 1.35rem;
+  font-size: 1.95rem; /* Increased size */
   font-weight: 800;
   color: #E2E8F0;
   text-decoration: none;
@@ -23,21 +26,23 @@
 }
 
 .nav-logo span {
-  font-size: 1.35rem;
+  font-size: 1.95rem; /* Matches parent size */
   font-weight: 800;
   color: #0D9488;
 }
 
+/* Navigation Links - Pushed to the right side next to Language Toggle */
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
+  margin-left: auto; /* Pushes links all the way right */
 }
 
 .nav-links a {
   color: #E2E8F0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   opacity: 0.8;
   transition: opacity 0.3s ease, color 0.3s ease;
@@ -49,6 +54,7 @@
   color: #0D9488;
 }
 
+/* Language Toggle Button */
 .lang-toggle {
   display: flex;
   align-items: center;
@@ -56,18 +62,19 @@
   background: rgba(13, 148, 136, 0.1);
   border: 1px solid #0D9488;
   color: #E2E8F0;
-  padding: 0.5rem 1.4rem;
+  padding: 0.6rem 1.6rem;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.125rem;
   transition: all 0.3s ease;
-  margin-left: 2rem;
+  margin-left: 1.75rem; /* Spacing between links and button */
 }
 
 .lang-toggle:hover {
   background: rgba(13, 148, 136, 0.2);
   transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.3);
 }
 
 .navbar.navbar-locked {
@@ -79,9 +86,13 @@
   opacity: 0.5;
 }
 
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
 @media (max-width: 1024px) {
   .navbar {
-    padding: 1.2rem 5%;
+    padding: 1.2rem 4%;
   }
   .nav-links {
     gap: 1.5rem;
@@ -90,30 +101,31 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 5%;
+    padding: 1rem 4%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
   .nav-logo {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .nav-logo span {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .nav-links {
     gap: 1.2rem;
     order: 2;
     width: 100%;
+    margin-left: 0; /* Resets flex push on stacked mobile view */
     justify-content: center;
   }
   .nav-links a {
-    font-size: 0.95rem;
+    font-size: 1.1875rem;
     padding: 6px 10px;
   }
   .lang-toggle {
     margin-left: 0;
-    font-size: 0.85rem;
-    padding: 0.4rem 1.1rem;
+    font-size: 1.0625rem;
+    padding: 0.5rem 1.25rem;
   }
 }

@@ -1,5 +1,5 @@
 footer.contact-container {
-  padding: 100px 10%;
+  padding: 100px 4%; /* Adjusted to 4% for clean alignment with Navbar & Hero edge layout */
   background-color: #020617;
   color: var(--text-main-30, #E2E8F0);
   overflow-x: hidden;
@@ -11,7 +11,7 @@ footer.contact-container {
 }
 
 .contact-section-title {
-  font-size: 2.5rem;
+  font-size: 3.125rem; /* Scaled up (+25%) from 2.5rem */
   font-weight: 700;
   text-align: center;
   margin-bottom: 80px;
@@ -37,14 +37,14 @@ footer.contact-container {
 }
 
 .contact-brand-logo {
-  width: 45px;
-  height: 45px;
+  width: 56px; /* Scaled up (+25%) from 45px */
+  height: 56px;
   object-fit: contain;
   filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
 }
 
 .contact-brand-name {
-  font-size: 2.4rem;
+  font-size: 3rem; /* Scaled up (+25%) from 2.4rem */
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -62,7 +62,7 @@ footer.contact-container {
 }
 
 .contact-brand-description p {
-  font-size: 1.05rem;
+  font-size: 1.3125rem; /* Scaled up (+25%) from 1.05rem */
   line-height: 1.6;
   font-weight: 400;
   color: var(--text-main-30, #E2E8F0);
@@ -78,7 +78,7 @@ footer.contact-container {
 }
 
 .detail-layout-title {
-  font-size: 0.85rem;
+  font-size: 1.0625rem; /* Scaled up (+25%) from 0.85rem */
   font-weight: 600;
   color: var(--text-main-30, #E2E8F0);
   opacity: 0.6;
@@ -116,14 +116,14 @@ footer.contact-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
+  font-size: 1.125rem; /* Scaled up (+25%) from 0.9rem */
   font-weight: 500;
   opacity: 0.6;
   color: var(--text-main-30, #E2E8F0);
 }
 
 .detail-value-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Scaled up (+25%) from 1.2rem */
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -131,8 +131,8 @@ footer.contact-container {
 }
 
 .detail-svg-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px; /* Scaled up (+25%) from 16px */
+  height: 20px;
   object-fit: contain;
   filter: invert(93%) sepia(12%) saturate(304%) hue-rotate(182deg) brightness(97%) contrast(96%);
   transition: filter 0.3s ease-in-out;
@@ -141,6 +141,10 @@ footer.contact-container {
 .contact-detail-card:hover .detail-svg-icon {
   filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
 }
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
 
 @media (max-width: 968px) {
   .contact-layout {
@@ -157,20 +161,20 @@ footer.contact-container {
 
 @media (max-width: 768px) {
   .contact-container {
-    padding: 60px 5%;
+    padding: 60px 4%;
   }
   .contact-section-title {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Scaled up (+25%) from 2rem */
     margin-bottom: 40px;
   }
   .contact-brand-name {
-    font-size: 1.8rem;
+    font-size: 2.25rem; /* Scaled up (+25%) from 1.8rem */
   }
   .contact-brand-description p {
-    font-size: 1rem;
+    font-size: 1.25rem; /* Scaled up (+25%) from 1rem */
   }
   .detail-value-text {
-    font-size: 1.1rem;
+    font-size: 1.375rem; /* Scaled up (+25%) from 1.1rem */
   }
   .contact-detail-card {
     padding: 25px;

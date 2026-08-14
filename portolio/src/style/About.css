@@ -35,18 +35,24 @@
 }
 
 .header-icon {
-  font-size: 1.5rem;
+  font-size: 1.85rem; /* Scaled from 1.5rem */
+}
+
+.header-icon-img {
+  width: 42px; /* Adjusted slightly to match larger header */
+  height: 42px;
+  object-fit: contain;
 }
 
 .card-header h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Scaled from 2rem */
   font-weight: 700;
   color: #0f172a;
   margin: 0;
 }
 
 .profile-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Scaled from 1.2rem */
   color: #334155;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -55,7 +61,7 @@
 .profile-bio {
   line-height: 1.6;
   color: #64748b;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Scaled from 1rem */
   margin-bottom: 2rem;
 }
 
@@ -75,7 +81,7 @@
 
 .divider-text {
   padding: 0 10px;
-  font-size: 0.8rem;
+  font-size: 1rem; /* Scaled from 0.8rem */
   color: #94a3b8;
   font-weight: 600;
   text-transform: uppercase;
@@ -92,12 +98,12 @@
 .extra-info h4 {
   margin: 0;
   color: #334155;
-  font-size: 1.1rem;
+  font-size: 1.375rem; /* Scaled from 1.1rem */
 }
 
 .extra-info p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Scaled from 1rem */
 }
 
 .core-skills-list {
@@ -126,8 +132,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
 }
 
@@ -145,14 +151,14 @@
 
 .skill-meta h4 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.375rem; /* Scaled from 1.1rem */
   color: #0f172a;
   font-weight: 600;
 }
 
 .skill-meta p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 1.05rem; /* Scaled from 0.85rem */
   color: #64748b;
 }
 
@@ -162,7 +168,7 @@
 }
 
 .supporting-title {
-  font-size: 1rem;
+  font-size: 1.25rem; /* Scaled from 1rem */
   color: #475569;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -177,9 +183,9 @@
 }
 
 .supporting-badge {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.1rem;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 1.05rem; /* Scaled from 0.85rem */
   font-weight: 500;
 }
 
@@ -187,12 +193,6 @@
 .badge-1 { background-color: #f3e8ff; color: #7c3aed; }
 .badge-2 { background-color: #e0f2fe; color: #0369a1; }
 .badge-3 { background-color: #dcfce7; color: #15803d; }
-
-.header-icon-img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
 
 @media (max-width: 992px) {
   .about-grid {
@@ -209,15 +209,15 @@
     padding: 1.5rem;
   }
   .card-header h2 {
-    font-size: 1.6rem;
+    font-size: 2rem; /* Scaled from 1.6rem */
   }
   .profile-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.375rem; /* Scaled from 1.1rem */
   }
   .profile-bio, .extra-info p, .skill-meta h4 {
-    font-size: 0.95rem;
+    font-size: 1.2rem; /* Scaled from 0.95rem */
   }
   .skill-meta p {
-    font-size: 0.8rem;
+    font-size: 1rem; /* Scaled from 0.8rem */
   }
 }
