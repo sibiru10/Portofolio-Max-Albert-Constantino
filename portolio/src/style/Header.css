@@ -2,76 +2,105 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 4%;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.1rem 6%;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(13, 148, 136, 0.35);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 
-              0 1px 0 rgba(226, 232, 240, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(226, 232, 240, 0.1);
+  transition: padding 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-logo {
   font-size: 1.45rem;
   font-weight: 800;
-  color: #E2E8F0;
-  text-decoration: none;
   letter-spacing: -0.5px;
+  color: #e2e8f0;
+  text-decoration: none;
 }
 
-.nav-logo span {
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: #0D9488;
+.nav-logo .logo-highlight {
+  color: #0d9488;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
-  list-style: none;
+  gap: 0.5rem;
+  align-items: center;
   margin-left: auto;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-links a {
-  color: #E2E8F0;
-  text-decoration: none;
-  font-size: 1rem;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.95rem;
   font-weight: 500;
-  opacity: 0.8;
-  transition: opacity 0.3s ease, color 0.3s ease;
+  color: #e2e8f0;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  opacity: 0.75;
+  transition: opacity 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
+  color: #ffffff;
   opacity: 1;
-  color: #0D9488;
 }
 
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(13, 148, 136, 0.1);
-  border: 1px solid #0D9488;
-  color: #E2E8F0;
-  padding: 0.5rem 1.4rem;
-  border-radius: 50px;
-  cursor: pointer;
+.nav-links a.active {
   font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  margin-left: 1.75rem;
+  color: #2dd4bf;
+  background-color: rgba(13, 148, 136, 0.15);
+  border-color: rgba(45, 212, 191, 0.25);
+  opacity: 1;
 }
 
-.lang-toggle:hover {
+.lang-switcher-btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 1.75rem;
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.lang-switcher-btn:hover {
   background: rgba(13, 148, 136, 0.2);
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(13, 148, 136, 0.3);
+  border-color: #2dd4bf;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+  transform: translateY(-1px);
+}
+
+.lang-main {
+  color: #2dd4bf;
+}
+
+.lang-divider {
+  font-weight: 300;
+  opacity: 0.35;
+}
+
+.lang-sub {
+  opacity: 0.8;
 }
 
 .navbar.navbar-locked {
@@ -85,40 +114,38 @@
 
 @media (max-width: 1024px) {
   .navbar {
-    padding: 1.2rem 4%;
-  }
-  .nav-links {
-    gap: 1.5rem;
+    padding: 1.1rem 4%;
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 4%;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 1rem 4%;
   }
+
   .nav-logo {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
-  .nav-logo span {
-    font-size: 1.2rem;
-  }
+
   .nav-links {
-    gap: 1.2rem;
-    order: 2;
+    order: 3;
+    justify-content: center;
+    gap: 0.25rem;
     width: 100%;
     margin-left: 0;
-    justify-content: center;
   }
+
   .nav-links a {
-    font-size: 0.95rem;
-    padding: 6px 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
-  .lang-toggle {
+
+  .lang-switcher-btn {
     margin-left: 0;
-    font-size: 0.85rem;
-    padding: 0.4rem 1.1rem;
+    padding: 6px 14px;
+    font-size: 0.8rem;
   }
 }

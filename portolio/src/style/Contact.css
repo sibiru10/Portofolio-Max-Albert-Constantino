@@ -1,8 +1,8 @@
 footer.contact-container {
-  padding: 100px 4%;
-  background-color: #020617;
-  color: var(--text-main-30, #E2E8F0);
   overflow-x: hidden;
+  padding: 100px 8% 40px;
+  color: var(--text-main-30, #e2e8f0);
+  background-color: #020617;
   border-top: 1px solid rgba(13, 148, 136, 0.2);
 }
 
@@ -11,10 +11,10 @@ footer.contact-container {
 }
 
 .contact-section-title {
+  margin-bottom: 80px;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 80px;
 }
 
 .contact-layout {
@@ -24,16 +24,16 @@ footer.contact-container {
 }
 
 .contact-brand-wrapper {
-  flex: 1.2;
   display: flex;
+  flex: 1.2;
   flex-direction: column;
   gap: 25px;
 }
 
 .contact-logo-header {
   display: flex;
-  align-items: center;
   gap: 15px;
+  align-items: center;
 }
 
 .contact-brand-logo {
@@ -44,15 +44,15 @@ footer.contact-container {
 }
 
 .contact-brand-name {
+  margin: 0;
   font-size: 2.4rem;
   font-weight: 700;
-  color: #ffffff;
-  margin: 0;
   letter-spacing: -0.5px;
+  color: #ffffff;
 }
 
 .contact-brand-name .text-highlight {
-  color: var(--accent-teal-10, #0D9488);
+  color: var(--accent-teal-10, #0d9488);
 }
 
 .contact-brand-description {
@@ -62,48 +62,77 @@ footer.contact-container {
 }
 
 .contact-brand-description p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  font-weight: 400;
-  color: var(--text-main-30, #E2E8F0);
-  opacity: 0.85;
   margin: 0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-main-30, #e2e8f0);
+  opacity: 0.85;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  background: rgba(13, 148, 136, 0.15);
+  border-color: rgba(45, 212, 191, 0.5);
+  transform: translateY(-3px);
+}
+
+.social-svg-icon {
+  width: 22px;
+  height: 22px;
+  filter: invert(93%) sepia(12%) saturate(304%) hue-rotate(182deg) brightness(97%) contrast(96%);
+  transition: filter 0.2s ease;
+}
+
+.social-icon-btn:hover .social-svg-icon {
+  filter: invert(72%) sepia(48%) saturate(720%) hue-rotate(125deg) brightness(98%) contrast(95%);
 }
 
 .contact-info-column {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 20px;
 }
 
 .detail-layout-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-main-30, #E2E8F0);
-  opacity: 0.6;
   margin: 0;
   padding-left: 5px;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
   letter-spacing: 1px;
+  color: var(--text-main-30, #e2e8f0);
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
 .contact-detail-card {
-  background: var(--bg-card-surface, #1E293B);
-  padding: 40px;
-  border-radius: 16px;
-  border: 1px solid rgba(226, 232, 240, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 30px;
-  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.contact-detail-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(13, 148, 136, 0.4);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  background: var(--bg-card-surface, #1e293b);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  will-change: transform, border-color, box-shadow;
 }
 
 .detail-item-block {
@@ -114,20 +143,35 @@ footer.contact-container {
 
 .detail-label-zone {
   display: flex;
-  align-items: center;
   gap: 10px;
+  align-items: center;
   font-size: 0.9rem;
   font-weight: 500;
+  color: var(--text-main-30, #e2e8f0);
   opacity: 0.6;
-  color: var(--text-main-30, #E2E8F0);
 }
 
 .detail-value-text {
+  margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   color: #ffffff;
-  margin: 0;
   word-break: break-all;
+}
+
+.detail-value-link {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.detail-value-link:hover {
+  color: #2dd4bf;
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
 }
 
 .detail-svg-icon {
@@ -142,38 +186,68 @@ footer.contact-container {
   filter: invert(41%) sepia(96%) saturate(1034%) hue-rotate(134deg) brightness(93%) contrast(92%);
 }
 
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding-top: 25px;
+  font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.6);
+  border-top: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.footer-copyright,
+.footer-tech-credit {
+  margin: 0;
+}
+
 @media (max-width: 968px) {
   .contact-layout {
     flex-direction: column;
     gap: 40px;
     align-items: flex-start;
   }
+
   .contact-brand-wrapper,
   .contact-info-column {
-    width: 100%;
     flex: none;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .contact-container {
-    padding: 60px 4%;
+  footer.contact-container {
+    padding: 60px 5% 30px;
   }
+
   .contact-section-title {
-    font-size: 2rem;
     margin-bottom: 40px;
+    font-size: 2rem;
   }
+
   .contact-brand-name {
     font-size: 1.8rem;
   }
+
   .contact-brand-description p {
     font-size: 1rem;
   }
-  .detail-value-text {
+
+  .detail-value-text,
+  .detail-value-link {
     font-size: 1.1rem;
   }
+
   .contact-detail-card {
-    padding: 25px;
     gap: 20px;
+    padding: 25px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    text-align: center;
   }
 }
