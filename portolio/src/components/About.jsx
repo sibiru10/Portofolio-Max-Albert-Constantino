@@ -38,7 +38,7 @@ function TiltedCard({
   scaleOnHover = 1.02,
   rotateAmplitude = 5,
   showTooltip = false,
-  overlayContent = null
+  children
 }) {
   const ref = useRef(null);
   const lastY = useRef(0);
@@ -112,9 +112,7 @@ function TiltedCard({
           scale
         }}
       >
-        {overlayContent && (
-          <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
-        )}
+        {children}
       </motion.div>
 
       {showTooltip && captionText && (
@@ -150,7 +148,7 @@ export default function About() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 75%',
+          start: 'top 80%',
           toggleActions: 'play none none none'
         }
       });
@@ -178,44 +176,49 @@ export default function About() {
       }, '-=0.3');
     }, sectionRef);
 
+    ScrollTrigger.refresh();
+
     return () => ctx.revert();
   }, []);
 
   return (
     <section ref={sectionRef} id="about" className="about-section">
+      <div style={{ textAlign: 'center' }}>
+        <span className="section-badge">get to know me better</span>
+      </div>
+
       <div className="about-grid">
         <div ref={leftCardRef} className="about-card-wrapper">
           <TiltedCard
             rotateAmplitude={5}
             scaleOnHover={1.02}
             showTooltip={false}
-            overlayContent={
-              <div className="about-card profile-card">
-                <div className="card-header">
-                  <img src={educationIcon} alt="Profile Icon" className="header-icon-img" />
-                  <h2>{t.aboutTitle}</h2>
+          >
+            <div className="about-card profile-card">
+              <div className="card-header">
+                <img src={educationIcon} alt="Profile Icon" className="header-icon-img" />
+                <h2>{t.aboutTitle}</h2>
+              </div>
+
+              <div className="card-body">
+                <h3 className="profile-subtitle" style={{ color: '#0D9488' }}>
+                  Max Albert Constantino - Web Developer
+                </h3>
+                <p className="profile-bio">{t.aboutBio}</p>
+
+                <div className="divider-container">
+                  <span className="divider-text">{t.focusExperience}</span>
                 </div>
 
-                <div className="card-body">
-                  <h3 className="profile-subtitle" style={{ color: '#0D9488' }}>
-                    Max Albert Constantino - Web Developer
-                  </h3>
-                  <p className="profile-bio">{t.aboutBio}</p>
-
-                  <div className="divider-container">
-                    <span className="divider-text">{t.focusExperience}</span>
-                  </div>
-
-                  <div className="extra-info">
-                    <div>
-                      <h4 style={{ color: '#0D9488' }}>{t.lastEducation}</h4>
-                      <p>{t.schoolDuration}</p>
-                    </div>
+                <div className="extra-info">
+                  <div>
+                    <h4 style={{ color: '#0D9488' }}>{t.lastEducation}</h4>
+                    <p>{t.schoolDuration}</p>
                   </div>
                 </div>
               </div>
-            }
-          />
+            </div>
+          </TiltedCard>
         </div>
 
         <div ref={rightCardRef} className="about-card skills-card">

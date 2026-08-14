@@ -1,8 +1,24 @@
 .about-section {
-  padding: 60px 4% 80px;
+  padding: 100px 4% 80px;
   background-color: #0f172a;
   color: #e2e8f0;
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+.section-badge,
+.about-badge {
+  display: inline-block;
+  margin: 0 auto 1.5rem;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2dd4bf;
+  background-color: rgba(13, 148, 136, 0.15);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  border-radius: 9999px;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .about-grid {
@@ -14,10 +30,15 @@
   margin: 0 auto;
 }
 
-.about-card-wrapper {
+.about-card-wrapper,
+.tilted-card-figure,
+.tilted-card-inner {
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .about-card {
@@ -261,25 +282,6 @@
   box-shadow: 0 4px 10px rgba(13, 148, 136, 0.12);
 }
 
-.tilted-card-figure {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  perspective: 800px;
-}
-
-.tilted-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-}
-
 .tilted-card-overlay {
   position: absolute;
   top: 0;
@@ -294,7 +296,7 @@
 
 @media (max-width: 992px) {
   .about-section {
-    padding: 50px 5% 65px;
+    padding: 110px 5% 65px;
   }
 
   .about-grid {
@@ -310,6 +312,10 @@
 }
 
 @media (max-width: 768px) {
+  .about-section {
+    padding-top: 125px;
+  }
+
   .core-skills-list {
     grid-template-columns: 1fr;
   }
@@ -325,11 +331,14 @@
 
 @media (max-width: 576px) {
   .about-section {
-    padding: 40px 4% 50px;
+    padding-top: 130px;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 50px;
   }
 
   .about-card {
-    padding: 1.25rem 1.1rem;
+    padding: 1.25rem 1rem;
     border-radius: 16px;
   }
 
